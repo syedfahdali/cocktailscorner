@@ -1,0 +1,34 @@
+/* Favorite Button CSS */
+
+.btn-favorite {
+    --primaryColor: #476a2e;
+    padding: 10px 30px 12px 12px;
+    margin-right: 15px;
+    width: 5%;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    color: #555; /* Default text color */
+    background-color: var(--primaryColor); /* Default background color */
+  }
+  
+  .btn-favorite.favorite {
+    color: #fff;
+    background-color: #e74c3c; /* Favorite active color */
+  }
+  
+  .btn-favorite i {
+    margin-right: 8px;
+  }
+  
+  .btn-favorite:hover {
+    background-color: #e0e0e0; /* Hover color for non-favorite state */
+  }
+  
+  .btn-favorite.favorite:hover {
+    background-color: #c0392b; /* Hover color for favorite state */
+  }
+  

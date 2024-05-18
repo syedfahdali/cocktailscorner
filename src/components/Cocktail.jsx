@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { db } from "../pages/firebase";
 import { AuthContext } from './AuthContext';
 import { doc, updateDoc, setDoc } from "firebase/firestore"; 
-
+import './Cocktail.css'
 export default function Cocktail({ image, name, id, info, glass }) {
   const [isFavorite, setIsFavorite] = useState(false);
   const { currentUser } = useContext(AuthContext);
@@ -40,10 +40,9 @@ export default function Cocktail({ image, name, id, info, glass }) {
         <h4>{glass}</h4>
         <p>{info}</p>
         <button
-          className={`btn btn-primary btn-details ${isFavorite ? 'favorite' : ''}`}
+          className={`btn-favorite  ${isFavorite ? 'favorite' : ''}`}
           onClick={toggleFavorite}
-        >
-          <i className="fas fa-heart"></i>
+        >❤️
         </button>
         <Link to={`/cocktail/${id}`} className="btn btn-primary btn-details">
           details
