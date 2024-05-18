@@ -1,44 +1,43 @@
-// SignUp.js
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { AuthContext } from '../components/AuthContext';
+import { auth } from './firebase';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
-import { auth } from './firebase'; // Adjust the import path as needed
-import './SignUp.css';
+import './SignUp.css'; 
 
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [error, setError] = useState('');
+  const { setCurrentUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setError("Passwords do not match!");
+      alert("Passwords do not match!");
       return;
     }
 
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       await updateProfile(userCredential.user, { displayName: name });
-      console.log('User signed up successfully!');
-      navigate('/');
+      setCurrentUser(userCredential.user);
+      navigate('/dashboard');
     } catch (error) {
-      setError(error.message);
+      console.error("Error signing up: ", error);
     }
   };
 
   return (
     <div className="signup-container">
       <h2>Sign Up</h2>
-      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Name</label>
           <input
-            type="text"
+            type="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required

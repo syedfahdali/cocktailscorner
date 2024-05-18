@@ -1,35 +1,31 @@
-// Login.js
+// src/pages/Login.jsx
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase'; // Adjust the import path as needed
-import { AuthContext } from '../components/AuthContext'; // Import AuthContext
+import { AuthContext } from '../components/AuthContext';
+import { auth } from './firebase';
 import './Login.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const { setCurrentUser } = useContext(AuthContext);
   const navigate = useNavigate();
-  const { setCurrentUser } = useContext(AuthContext); // Use AuthContext
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      setCurrentUser(userCredential.user); // Set the current user
-      console.log('User logged in successfully!');
-      navigate('/');
+      setCurrentUser(userCredential.user);
+      navigate('/dashboard');
     } catch (error) {
-      setError(error.message);
+      console.error('Error logging in: ', error);
     }
   };
 
   return (
     <div className="login-container">
       <h2>Login</h2>
-      {error && <p className="error">{error}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label>Email</label>

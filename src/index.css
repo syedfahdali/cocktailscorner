@@ -143,53 +143,7 @@ Buttons
   background: var(--primaryLightColor);
   border-color: var(--primaryLightColor);
 }
-/* 
-====== 
-Navbar
-======
-*/
-.navbar {
-  background: var(--mainWhite);
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  border-bottom: 2px solid var(--primaryColor);
-  box-shadow: var(--lightShadow);
-}
-.nav-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: var(--smallWidth);
-  margin: 0 auto;
-  max-width: var(--fullWidth);
-}
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.nav-links a {
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
-  transition: var(--mainTransition);
-}
-.nav-links a:hover {
-  color: var(--primaryColor);
-}
-.logo {
-  width: 15rem;
-  height: 15rem;
-}
-.username {
-  margin-right: 20px;
-  font-weight: bold;
-}
+
 /* 
 ====== 
 About
@@ -356,4 +310,53 @@ Cocktail
   .cocktails-center {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+/* 
+====== 
+Global Styles 
+======
+*/
+.login-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #476A2e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d4e6a5;
+  transition: all 0.3s linear;
+  color:#476A2e ;
 }

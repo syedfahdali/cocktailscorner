@@ -1,0 +1,105 @@
+/* Dashboard.css */
+.dashboard-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .welcome-text {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 70%;
+    font-size: 16px;
+  }
+  
+  .add-button {
+    padding: 10px; /* Adjust padding */
+    border-radius: 5px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    width: 120px; /* Set specific width */
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  .favorites-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .favorite-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .dashboard-container {
+      padding: 15px;
+      max-width: 90%;
+    }
+  
+    .welcome-text {
+      font-size: 20px;
+    }
+  
+    .input-container {
+      flex-direction: column;
+    }
+  
+    .input {
+      margin: 0 0 10px 0;
+      width: 100%;
+    }
+  
+    .add-button {
+      width: auto; /* Make button adapt to content */
+      padding: 10px 20px; /* Adjust padding for better touch interaction */
+    }
+  
+    .favorite-item {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .dashboard-container {
+      padding: 10px;
+    }
+  
+    .welcome-text {
+      font-size: 18px;
+    }
+  
+    .add-button {
+      font-size: 14px;
+      padding: 10px 15px; /* Further adjust padding */
+    }
+  
+    .favorite-item {
+      font-size: 14px;
+    }
+  }
+  

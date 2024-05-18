@@ -1,0 +1,69 @@
+/* Navbar.css */
+.navbar {
+  background: var(--mainWhite);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--primaryColor);
+  box-shadow: var(--lightShadow);
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; /* Adjusted width for responsiveness */
+  margin: 0 auto;
+  max-width: 1170px; /* Maximum width for larger screens */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-transform: capitalize;
+  margin-right: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  transition: var(--mainTransition);
+}
+
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.logo {
+  width: 150px; /* Adjusted logo size for responsiveness */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.username {
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-center {
+    width: 90%;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .nav-links {
+    display: none; /* Hide the links */
+  }
+
+  .logout-button {
+    margin-left: auto; /* Align logout button to the right */
+  }
+
+  .username {
+    display: none; /* Hide the username on smaller screens */
+  }
+}
