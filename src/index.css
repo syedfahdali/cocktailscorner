@@ -143,6 +143,105 @@ Buttons
   background: var(--primaryLightColor);
   border-color: var(--primaryLightColor);
 }
+/* Navbar.css */
+.navbar {
+  background: var(--mainWhite);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--primaryColor);
+  box-shadow: var(--lightShadow);
+}
+
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--smallWidth);
+  margin: 0 auto;
+  max-width: var(--fullWidth);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  text-transform: capitalize;
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-weight: 400;
+  letter-spacing: 1px; /* Reduced letter-spacing */
+  font-size: 1rem; /* Decreased font size */
+  padding: 0.25rem 0.3rem; /* Decreased padding */
+  transition: var(--mainTransition);
+}
+
+.nav-links a:hover {
+  color: var(--primaryColor);
+}
+
+.logo {
+  width: 15rem; /* Initial logo size */
+  height: 15rem; /* Maintain aspect ratio */
+}
+
+.username {
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 0.9rem; /* Decreased font size */
+}
+
+.logout-button {
+  margin-left: 20px; /* Add margin between username and logout button */
+  font-size: 0.9rem; /* Decreased font size */
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 10rem; /* Adjusted logo size for smaller screens */
+    height: 10rem; /* Maintain aspect ratio */
+  }
+
+  .nav-links a {
+    font-size: 0.8rem; /* Decreased font size for smaller screens */
+    padding: 0.2rem 0.3rem; /* Decreased padding for smaller screens */
+  }
+
+  .username {
+    font-size: 0.8rem; /* Decreased font size for smaller screens */
+  }
+
+  .logout-button {
+    margin-left: 10px; /* Decreased margin between username and logout button */
+    font-size: 0.8rem; /* Decreased font size for smaller screens */
+  }
+}
+@media screen and (max-width: 500px) {
+  .logo {
+    width: 7rem; /* Adjusted logo size for smaller screens */
+    height: 10rem; /* Maintain aspect ratio */
+  }
+
+  .nav-links a {
+    font-size: 0.6rem; /* Decreased font size for smaller screens */
+    padding: 0.1rem 0.1rem; /* Decreased padding for smaller screens */
+  }
+
+  .username {
+    font-size: 0.7rem; /* Decreased font size for smaller screens */
+  }
+
+  .logout-button {
+    margin-left: 1px; /* Decreased margin between username and logout button */
+    font-size: 0.7rem; /* Decreased font size for smaller screens */
+  }
+  
+  
+}
 
 /* 
 ====== 
@@ -317,46 +416,47 @@ Global Styles
 ======
 */
 .login-container {
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 8px;
-  box-sizing: border-box;
-}
-
-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #476A2e;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #d4e6a5;
-  transition: all 0.3s linear;
-  color:#476A2e ;
-}
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #476A2e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #d4e6a5;
+    transition: all 0.3s linear;
+    color:#476A2e ;
+  }
+  
