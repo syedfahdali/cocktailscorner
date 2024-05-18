@@ -1,4 +1,18 @@
-Installation Steps:
-1.Clone the repository to your machine.
-2.Run command: npm install (in your cloned directory)
-3.Run command: npm run dev
+
+## Installation
+
+1. Clone the github repository
+
+```bash
+  git clone https://github.com/syedfahdali/Cocktail-Corner-.git
+```
+
+2. In the cloned directory run:
+
+```bash
+    npm install 
+```
+3.To run the server
+```bash
+    npm run dev 
+```
