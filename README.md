@@ -4,7 +4,7 @@
 1. Clone the github repository
 
 ```bash
-  git clone https://github.com/syedfahdali/Cocktail-Corner-.git
+  git clone https://github.com/syedfahdali/cocktailscorner.git
 ```
 
 2. In the cloned directory run:
