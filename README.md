@@ -20,8 +20,8 @@ To run this application, you will need the following:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/cocktail-app.git
-   cd cocktail-app
+   git clone https://github.com/syedfahdali/cocktailscorner.git
+   cd cocktailscorner
    ```
 
 2. **Install Dependencies**:
