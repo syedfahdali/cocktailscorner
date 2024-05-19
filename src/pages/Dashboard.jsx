@@ -8,6 +8,7 @@ const Dashboard = () => {
   const [favorites, setFavorites] = useState([]);
   const [newFavorite, setNewFavorite] = useState('');
 
+  
   useEffect(() => {
     if (currentUser) {
       const fetchFavorites = async () => {

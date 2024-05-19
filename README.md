@@ -90,3 +90,4 @@ You can create additional accounts through the application’s registration proc
 
 This README.md file provides a clear and detailed guide for setting up and running your Cocktails Application. It covers all necessary aspects, from requirements and installation steps to available npm commands and login details.
 
+

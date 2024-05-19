@@ -9,6 +9,7 @@ export default function SingleCocktail() {
 
   const [cocktail, setCocktail] = React.useState(null);
 
+  
   React.useEffect(() => {
     setLoading(true);
     async function getCocktail() {

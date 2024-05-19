@@ -11,6 +11,7 @@ export default function Home() {
   //Search state
   const [searchTerm, setSearchTerm] = React.useState("a");
 
+  
   //Cocktails state
   const [cocktails, setCocktails] = React.useState([]);
 

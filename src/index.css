@@ -162,6 +162,7 @@ Buttons
   max-width: var(--fullWidth);
 }
 
+
 .nav-links {
   display: flex;
   align-items: center;

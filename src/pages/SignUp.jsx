@@ -5,6 +5,7 @@ import { auth } from './firebase';
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import './SignUp.css'; 
 
+
 const Signup = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
